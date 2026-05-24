@@ -5,7 +5,11 @@ let msg = document.querySelector("#msg");
 
 CheckBtn.onclick = () => {
     let UserNum = Number(input.value);
-    if (UserNum === CorrectNum){
+    if (UserNum > 50) {
+        msg.innerText = "❌ Please enter a number between 1 and 50";
+        msg.style.color = "purple";
+    }
+    else if (UserNum === CorrectNum){
         msg.innerText = "Congratulation 🎉... You entered the correct Number";
         msg.style.color = "orange";
     }
