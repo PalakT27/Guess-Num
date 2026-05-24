@@ -5,7 +5,7 @@ let msg = document.querySelector("#msg");
 
 CheckBtn.onclick = () => {
     let UserNum = Number(input.value);
-    if (UserNum > 50) {
+    if (UserNum < 1 || UserNum >= 50) {
         msg.innerText = "❌ Please enter a number between 1 and 50";
         msg.style.color = "purple";
     }
